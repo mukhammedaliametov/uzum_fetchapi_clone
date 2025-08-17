@@ -4,6 +4,7 @@ import CenterHeader from './components/CenterHeader';
 import Bottom from './components/Bottom';
 
 const App = () => {
+  alert('Hammaga salom!');
   return (
     <div>
       <TopHeader />
