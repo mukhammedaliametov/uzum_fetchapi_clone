@@ -7,7 +7,6 @@ import { FaRegHeart } from "react-icons/fa6";
 import BasketIcon from '../assets/basket.svg';
 
 const CenterHeader = () => {
-    const [lan, setLan] = useState(0);
     return (
         <div className='container flex items-center justify-between gap-[20px] font-inter'>
             <a href="#" className='py-[25px]'>
@@ -31,11 +30,11 @@ const CenterHeader = () => {
                 </div>
                 <div className='flex items-center gap-[6px] hover:text-[#7000FF] cursor-pointer'>
                     <FaRegHeart />
-                    <span>Kirish</span>
+                    <span>Saralangan</span>
                 </div>
                 <div className='flex items-center gap-[6px] hover:text-[#7000FF] cursor-pointer'>
                     <img src={BasketIcon} alt="basket_icon" />
-                    <span>Kirish</span>
+                    <span>Savat</span>
                 </div>
             </div>
         </div>
