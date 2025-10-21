@@ -14,9 +14,7 @@ const Cards = () => {
       .then((data) => setProducts(data))
       .catch((err) => console.log("Error:", err));
   }, []);
-
-
-
+  
   return (
     <div className="container font-inter">
       <h2 className="text-[24px] md:text-[30px] font-bold text-[#1F2026] flex items-center gap-[10px]">
@@ -36,7 +34,7 @@ const Cards = () => {
                 <img
                   src={item.image}
                   alt="test_card"
-                  className="w-full -z-10 scale-80 group-hover:scale-83 duration-500 transition-all h-[300px]"
+                  className="w-full -z-10 scale-80 group-hover:scale-83 duration-500 transition-all h-full md:h-[300px]"
                 />
                 <GoHeart className="absolute top-[10px] right-[10px] text-[30px] p-[6px] bg-white rounded-full cursor-pointer" />
                 <p className="absolute bottom-0 bg-[#FF3090] text-white text-[12px] px-[7px] py-[2px] rounded-full m-[5px]">
