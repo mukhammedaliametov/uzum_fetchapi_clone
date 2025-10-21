@@ -4,6 +4,7 @@ import CenterHeader from './components/CenterHeader';
 import Bottom from './components/Bottom';
 import Hero from './components/Hero';
 import Footer from './components/Footer';
+import Cards from './components/Cards';
 
 const App = () => {
   return (
@@ -13,6 +14,8 @@ const App = () => {
       <Bottom />
       <div className='mb-[30px]'></div>
       <Hero />
+      <div className='mb-[30px]'></div>
+      <Cards />
       <div className='mb-[40px]'></div>
       <Footer />
     </div>
