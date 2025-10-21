@@ -20,7 +20,7 @@ const CenterHeader = () => {
                 </a>
                 <div className='hidden md:flex items-center gap-[6px] border border-[#36374033] rounded-[4px] w-[600px] overflow-hidden'>
                     <input type="text" placeholder='Mahsulotlar va turkumlar izlash' className='w-[100%] py-[10px] px-[20px] outline-none' />
-                    <div className='bg-[#EDEFF2] h-[12.4vh] w-[90px] flex justify-center items-center cursor-pointer'>
+                    <div className='bg-[#EDEFF2] h-[12.4vh] lg:h-[7vh] w-[90px] flex justify-center items-center cursor-pointer'>
                     <IoSearch className='text-[20px]' />
                     </div>
                 </div>
