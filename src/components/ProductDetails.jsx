@@ -23,31 +23,31 @@ const ProductDetails = () => {
     <div>Yuklanmoqda...</div>
   ) : (
     <div className="container font-inter">
-      <div className="flex items-center gap-[6px] text-[14px] font-[]">
+      <div className="flex items-center overflow-x-scroll md:overflow-x-visible gap-[6px] text-[14px]">
         <Link
           to="/"
-          className="my-[15px] text-[15px] font-semibold flex items-center"
+          className="my-[15px] text-[15px] font-semibold flex items-center flex-shrink-0"
         >
           Bosh sahifa
         </Link>
         <FaAngleRight />
-        <span>{`${product.category[0].toUpperCase()}${product.category.slice(
+        <span className="flex-shrink-0">{`${product.category[0].toUpperCase()}${product.category.slice(
           1
         )}`}</span>
         <FaAngleRight />
-        <span>{`${product.title}`}</span>
+        <span className="flex-shrink-0">{`${product.title}`}</span>
       </div>
       <div>
-        <h3 className="text-[30px]/[36px] font-semibold w-[550px]">
+        <h3 className="text-[20px]/[26px] md:text-[30px]/[36px] font-semibold w-full md:w-[550px]">
           {product.title}
         </h3>
-        <div className="flex items-start gap-[40px]">
+        <div className="flex flex-col lg:flex-row justify-between xl:justify-start items-start gap-[40px]">
           <div className="">
             <span className="flex items-center gap-[6px] text-[14px] text-[#7E818C] mt-[5px] px-[5px]">
               <IoIosStar className="text-yellow-300 text-[16px]" />{" "}
               {product.rating.rate} ({product.rating.count} sharhlar)
             </span>
-            <div className="relative w-[400px] mt-[10px] rounded-[10px] overflow-hidden group">
+            <div className="relative w-full md:w-[400px] mt-[10px] rounded-[10px] overflow-hidden group">
               <div className="bg-[#eee] absolute w-full top-0 left-0 h-full -z-20"></div>
               <Link to={product.image} target="_blank">
                 <img
@@ -58,13 +58,13 @@ const ProductDetails = () => {
               </Link>
             </div>
           </div>
-          <div className="w-[400px]">
+          <div className="hidden lg:block w-[400px]">
             <p className="py-[8px] px-[20px] rounded-full bg-[#00000033] inline-block mt-[20px] mb-[10px]">Mahsulot haqida</p>
         <p className="text-[16px]/[24px]">{`${product.description[0].toUpperCase()}${product.description.slice(
           1
         )}`}</p>
           </div>
-          <div className="border border-[#0000004b] p-[20px] rounded-[20px]">
+          <div className="w-full md:w-[400px] border border-[#0000004b] p-[20px] rounded-[20px]">
             <p className="py-[2px] px-[6px] rounded-full bg-[#7000FF] text-white text-[12px] inline-block">-1% Uzum karta bilan</p>
             <h2 className="text-[30px] text-[#7000FF] font-semibold mt-[10px]">{Math.round(product.price * dollarRate).toLocaleString()} so'm</h2>
             <p className="mb-[8px]">Uzum kartasiz {Math.round(product.price * dollarRate + 1000).toLocaleString()} so`m <span className="line-through opacity-60">{Math.round(product.price * dollarRate * 1.3).toLocaleString()}</span></p>
@@ -93,6 +93,12 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
+            <div className="block lg:hidden w-full">
+            <p className="py-[8px] px-[20px] rounded-full bg-[#00000033] inline-block mt-[20px] mb-[10px]">Mahsulot haqida</p>
+        <p className="text-[16px]/[24px]">{`${product.description[0].toUpperCase()}${product.description.slice(
+          1
+        )}`}</p>
+          </div>
       </div>
     </div>
   );

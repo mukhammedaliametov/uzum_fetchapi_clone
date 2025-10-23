@@ -6,18 +6,19 @@ import { FaRegUser } from "react-icons/fa6";
 import { FaRegHeart } from "react-icons/fa6";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import MiniLogo from '../assets/favicon.png';
+import { Link } from 'react-router-dom';
 
 const CenterHeader = () => {
     return (
         <div className='container flex items-center justify-between gap-[20px] font-inter'>
-            <a href="#" className='py-[25px]'>
+            <Link to="/" className='py-[25px]'>
                 <img src={Logo} alt="logo" className='block md:hidden lg:block' />
                 <img src={MiniLogo} alt="mini-logo" className='hidden md:block lg:hidden' />
-            </a>
+            </Link>
             <div className='flex items-center gap-[20px]'>
-                <a href="" className='hidden lg:block'>
+                <Link to="/" className='hidden lg:block'>
                     <img src={Button} alt="button" />
-                </a>
+                </Link>
                 <div className='hidden md:flex items-center gap-[6px] border border-[#36374033] rounded-[4px] w-[600px] overflow-hidden'>
                     <input type="text" placeholder='Mahsulotlar va turkumlar izlash' className='w-[100%] py-[10px] px-[20px] outline-none' />
                     <div className='bg-[#EDEFF2] h-[12.4vh] lg:h-[7vh] w-[90px] flex justify-center items-center cursor-pointer'>
