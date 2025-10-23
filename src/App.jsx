@@ -1,24 +1,21 @@
-import React from 'react';
-import TopHeader from './components/TopHeader';
-import CenterHeader from './components/CenterHeader';
-import Bottom from './components/Bottom';
-import Hero from './components/Hero';
-import Footer from './components/Footer';
-import Cards from './components/Cards';
+import React from "react";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ProductDetails from "./components/ProductDetails";
 
 const App = () => {
   return (
-    <div>
-      <TopHeader />
-      <CenterHeader />
-      <Bottom />
-      <div className='mb-[30px]'></div>
-      <Hero />
-      <div className='mb-[30px]'></div>
-      <Cards />
-      <div className='mb-[40px]'></div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          <Route index element={<Hero />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+        </Route>
+      </Routes>
       <Footer />
-    </div>
+    </BrowserRouter>
   );
 };
 

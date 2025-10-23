@@ -9,7 +9,7 @@ import YouTube from '../assets/youtube.svg';
 const Footer = () => {
     return (
         <div className='container font-inter'>
-            <div className='grid grid-cols-2 gap-[20px] xl:flex items-top justify-between'>
+            <div className='grid grid-cols-2 gap-[20px] xl:flex items-top justify-between mt-[30px]'>
                 <div className='flex flex-col gap-[12px]'>
                     <p className='font-semibold text-[16px]'>Biz haqimizda</p>
                     <a href="#" className='text-[14px] text-[#8B8E99] hover:text-[#000]'>Topshirish Punkitlari</a>
