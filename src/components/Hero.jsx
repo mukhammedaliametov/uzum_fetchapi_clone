@@ -7,7 +7,7 @@ import Cards from "./Cards";
 const Hero = () => {
   return (
     <>
-    <div className="mt-[30px]"></div>
+      <div className="mt-[30px]"></div>
       <Link
         href="#"
         className="container relative flex items-center cursor-pointer"

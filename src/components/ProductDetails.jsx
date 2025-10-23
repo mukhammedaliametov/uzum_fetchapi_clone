@@ -4,6 +4,7 @@ import { IoIosStar } from "react-icons/io";
 import { FaAngleRight, FaCheck } from "react-icons/fa6";
 import { BsBagCheck } from "react-icons/bs";
 import { GoHeart } from "react-icons/go";
+import TopLoadingBar from "./TopLoadingBar";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -20,7 +21,7 @@ const ProductDetails = () => {
   console.log(product);
 
   return !product ? (
-    <div>Yuklanmoqda...</div>
+    <div><TopLoadingBar /></div>
   ) : (
     <div className="container font-inter">
       <div className="flex items-center overflow-x-scroll md:overflow-x-visible gap-[6px] text-[14px]">
